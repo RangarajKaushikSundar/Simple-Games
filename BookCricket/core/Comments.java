@@ -1,6 +1,6 @@
-package comp.sample.first;
+package core;
 
-public class SampleComments {
+public class Comments {
 	
 	String[] commentsFor2 = {"Chips down the legside for a 2.",
 							"Wonderful cover drive, 2 runs.",

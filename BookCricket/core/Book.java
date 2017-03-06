@@ -1,10 +1,10 @@
-package comp.sample.first;
+package core;
 
-public class SampleFirstBook {
+public class Book {
 	
 	int bookSize;
 	
-	public SampleFirstBook(int bookSizes) {
+	public Book(int bookSizes) {
 		bookSize = bookSizes;
 	}
 	

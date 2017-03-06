@@ -1,19 +1,19 @@
 /**
  * 
  */
-package comp.sample.first;
+package core;
 
 /**
  * @author rsundar
  *
  */
-public class SampleFirstPlayer {
+public class Player {
 	
 		boolean isOut;
 		int totalScore;
 		String name;
 		
-		public SampleFirstPlayer() {
+		public Player() {
 			isOut = false;
 			totalScore =  0;
 			

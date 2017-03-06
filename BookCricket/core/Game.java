@@ -1,13 +1,13 @@
 /**
  * 
  */
-package comp.sample.first;
+package core;
 
 
 
 import java.util.Scanner;
 
-public class SampleFirst {
+public class Game {
 	
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
@@ -56,13 +56,13 @@ public class SampleFirst {
 	/*********	START GAME	**************/
 			//INITIALIZE
 			boolean isGameOver = false;
-			SampleFirstPlayer[] players = new SampleFirstPlayer[numberOfPlayers];
-			SampleFirstBook book =  new SampleFirstBook(numberOfPages);
-			SampleComments comments =  new SampleComments();
+			Player[] players = new Player[numberOfPlayers];
+			Book book =  new Book(numberOfPages);
+			Comments comments =  new Comments();
 	
 			//GET PLAYER NAMES
 			for(int i = 0 ; i < players.length ; i++){
-				players[i] =  new SampleFirstPlayer();
+				players[i] =  new Player();
 				System.out.println("Enter the name of Player "+(i+1)+ ":  ");
 				players[i].name = scanner.next();
 			}
@@ -126,7 +126,7 @@ public class SampleFirst {
 			}
 		
 	}
-	 private static void printScores(SampleFirstPlayer[] players) {
+	 private static void printScores(Player[] players) {
 		String winner;
 		int topScore;
 		System.out.println("****** RESULTS ********");
@@ -149,7 +149,7 @@ public class SampleFirst {
 		}
 		
 	}
-	private static boolean isDraw(SampleFirstPlayer[] players) {
+	private static boolean isDraw(Player[] players) {
 		boolean isDraw = true;
 		int score = players[0].totalScore;
 		for(int i = 0 ; i < players.length ; i++){
@@ -160,7 +160,7 @@ public class SampleFirst {
 		}
 		return isDraw;
 	}
-	private static boolean checkIfGameOver(SampleFirstPlayer[] players) {
+	private static boolean checkIfGameOver(Player[] players) {
 		boolean isOver = true;
 		int numberOfActivePlayers = 0;
 		int activePlayer = 0;
